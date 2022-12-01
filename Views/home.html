@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='UTF-8'>
+    <meta name='author' content='Martín Antonio Córdoba Getar'>
+    <meta name='description' content='Práctica de Desarrollo de Interfaces 2ºDAM EFA El Campico'>
+    <meta name='keywords' content='MVC, DAM, Ejercicios Desarrollo de Interfaces'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Práctica 2.1 Desarrollo de Interfaces</title>
+    <script src="./vendor/jquery-3.6.1.min.js"></script>
+    <script src="./Controllers/index.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="../Views/home.html" id="navbar_btn_home" name="navbar_btn_home" class="navbar_btn active">HOME</a></li>
+                <li><a href="../Views/medicos_list.html" id="navbar_btn_medicos" name="navbar_btn_medicos" class="navbar_btn">MEDICOS</a></li>
+                <li><a href="../Views/pacientes_list.html" id="navbar_btn_pacientes" name="navbar_btn_pacientes" class="navbar_btn">PACIENTES</a></li>
+                <li><a href="../Views/citas_list.html" id="navbar_btn_citas" name="navbar_btn_citas" class="navbar_btn">CITAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main" id="main">
+        <article class="article" id="article1" name="article1">
+            <div class="title" id="article1_title" name="article1_title">
+                <h2>¡Bienvenido</h2>
+            </div>
+            <div class="article_content" id="article1_content" name="article1_content">
+                <p>Puede navegar con la barra superior para ver listados de médicos, pacientes y citas, e interactuar con estos.</p>
+                <p><strong>Acciones permitidas</strong></p>
+                <ul>
+                    <li>Ver listados filtrados</li>
+                    <li>Insertar nuevos registros</li>
+                    <li>Eliminar registros existentes</li>
+                    <li>Actualizar campos de registros existentes</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="footer">
+
+    </footer>
+</body>
+</html>
