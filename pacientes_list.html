@@ -39,11 +39,13 @@
             <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" placeholder="Juan Antonio" title="Escribe un nombre">
             <label for="apellido1">Apellido 1: </label><input type="text" name="apellido1" id="apellido1" placeholder="García" title="Escribe el primer apellido">
             <label for="sip">Nº SIP: </label><input type="number" name="sip" id="sip" placeholder="146502" title="Escribe un número de SIP">
-            <button type="submit" name="search_button" id="search_button" class="std_button">Buscar</button>
-            <button type="reset" name="reset_button" id="reset_button" class="std_button">Limpiar</button>
-            <input type="button" name="new_reg" id="new_reg" class="std_button" value="Crear nuevo registro" onclick="location.href='#'">
+            <button type="submit" name="search_button" id="search_button" class="btn btn-primary">Buscar</button>
+            <button type="reset" name="reset_button" id="reset_button" class="btn btn-danger">Limpiar</button>
+            
         </fieldset>
-        
+        <br>
+        <input type="button" name="new_reg" id="new_reg" class="btn btn-success" value="Crear nuevo registro" onclick="location.href='#'">
+        <br>
         <div id="tableToPrint"></div>
     </main>
 </body>
