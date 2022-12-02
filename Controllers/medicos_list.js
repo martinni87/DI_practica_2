@@ -13,11 +13,15 @@ $(document).ready(function(){
         .done(function(response){
             // console.log(response)
             printTableStruct()
-            var i = 1
-            while(i <= Object.keys(response).length){
-                printResponse(i,response)
-                i++
-            }
+            // var i = 1
+            Object.keys(response).forEach((element) => {
+                console.log(element + " -> " + response[element]["nombre"])
+                printResponse(element,response)
+            });
+            // while(i <= Object.keys(response).length){
+            //     printResponse(i,response)
+            //     i++
+            // }
         })
         .fail(function(jqXHR,textStatus,error){
             alert("Error en conexión ajax")
@@ -26,27 +30,12 @@ $(document).ready(function(){
 
     $("#reset_button").click(function(){
         $("#tableToPrint").html("")
+        document.getElementById("nombre").value = ""
+        document.getElementById("apellido1").value = ""
+        document.getElementById("numero_colegiado").value = ""
     })
 
 })
-
-
-function printResponse(index,response){
-    // console.log(response[index])
-    let fila =  `<tr>
-                    <td>` + response[index]["numero_colegiado"] + `</td>
-                    <td>` + response[index]["dni"] + `</td>
-                    <td>` + response[index]["nombre"] + `</td>
-                    <td>` + response[index]["apellido1"] + `</td>
-                    <td>` + response[index]["apellido2"] + `</td>
-                    <td>` + response[index]["telefono"] + `</td>
-                    <td>` + response[index]["especialidad"] + `</td>
-                    <td>` + response[index]["horario"] + `</td>
-                    <td><button id="delete_button`+index+`" class="std_button delete_btn">-</button></td>
-                    <td><button id="edit_button`+index+`" class="std_button delete_btn">Editar</button></td>
-                </tr>`
-    $("#myTableData").append(fila)
-}
 
 function printTableStruct(){
     let estructura = `<table id="myTable" class="list-table">
@@ -68,4 +57,21 @@ function printTableStruct(){
                     </tbody>
                     </table>`
     $("#tableToPrint").html(estructura)
+}
+
+function printResponse(index,response){
+    // console.log(response[index])
+    let fila =  `<tr>
+                    <td>` + response[index]["numero_colegiado"] + `</td>
+                    <td>` + response[index]["dni"] + `</td>
+                    <td>` + response[index]["nombre"] + `</td>
+                    <td>` + response[index]["apellido1"] + `</td>
+                    <td>` + response[index]["apellido2"] + `</td>
+                    <td>` + response[index]["telefono"] + `</td>
+                    <td>` + response[index]["especialidad"] + `</td>
+                    <td>` + response[index]["horario"] + `</td>
+                    <td><button id="delete_button`+index+`" class="std_button delete_btn">-</button></td>
+                    <td><button id="edit_button`+index+`" class="std_button delete_btn">Editar</button></td>
+                </tr>`
+    $("#myTableData").append(fila)
 }
