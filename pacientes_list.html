@@ -9,7 +9,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Práctica 2.1 Desarrollo de Interfaces</title>
     <script src="./vendor/jquery-3.6.1.min.js"></script>
-    <script src="./Controllers/index.js"></script>
+    <script src="./Controllers/pacientes_list.js"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -18,25 +18,23 @@
             <ul>
                 <li><a href="./home.html" id="navbar_btn_home" name="navbar_btn_home" class="navbar_btn">HOME</a></li>
                 <li><a href="./medicos_list.html" id="navbar_btn_medicos" name="navbar_btn_medicos" class="navbar_btn">MEDICOS</a></li>
-                <li><a href="./pacientes_list.html" id="navbar_btn_pacientes" name="navbar_btn_pacientes" class="navbar_btn active">PACIENTES</a></li>
+                <li><a href="./pacientes_list.html" id="navbar_btn_pacientes" name="navbar_btn_pacientes" class="navbar_btn  active">PACIENTES</a></li>
                 <li><a href="./citas_list.html" id="navbar_btn_citas" name="navbar_btn_citas" class="navbar_btn">CITAS</a></li>
             </ul>
-            <form>
-                <fieldset>
-                    <h2>form</h2>
-                </fieldset>
-            </form>
         </nav>
     </header>
-
-    <main class="main" id="main">
-        <article class="article" id="article1" name="article1">
-            <h2>pacientes</h2>
-        </article>
+    <main>
+        <fieldset>
+            <legend>Buscador de pacientes</legend>
+            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" placeholder="Juan Antonio" title="Escribe un nombre">
+            <label for="apellido1">Apellido 1: </label><input type="text" name="apellido1" id="apellido1" placeholder="García" title="Escribe el primer apellido">
+            <label for="sip">Nº SIP: </label><input type="number" name="sip" id="sip" placeholder="146502" title="Escribe un número de SIP">
+            <button type="submit" name="search_button" id="search_button" class="std_button">Buscar</button>
+            <button type="reset" name="reset_button" id="reset_button" class="std_button">Limpiar</button>
+            <input type="button" name="new_reg" id="new_reg" class="std_button" value="Crear nuevo registro" onclick="location.href='#'">
+        </fieldset>
+        
+        <div id="tableToPrint"></div>
     </main>
-
-    <footer class="footer" id="footer">
-
-    </footer>
 </body>
 </html>
