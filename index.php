@@ -18,9 +18,9 @@
             <form action="./web_services/login.php" method="post">
                 <fieldset>
                     <legend>Login</legend>
-                    <!-- A efectos de la práctica, el usuario es user y la contraseña también es 1234 -->
-                    <input type="text" name="user" class="inputFieldText" id="user" value="" placeholder="Usuario" title="Escriba nombre de usuario"required>
-                    <input type="password" name="password" class="inputFieldText" id="password" value="" placeholder="Contraseña" title="Escriba una contraseña" required>
+                    <!-- Pista a efectos de la práctica: usuario = user, contraseña = 1234 -->
+                    <label for="user">Usuario:</label><input type="text" name="user" class="std_input" id="user" placeholder="user" title="Introduzca un usuario" required>
+                    <label for="password">Contraseña:</label><input type="password" name="password" class="std_input" id="password" placeholder="******" title="Introduzca una contraseña" required>
                     <input type="submit" name="submit" class="std_button send_button" id="submit" value="Acceder">
                     <input type="reset" name="reset" class="std_button reset_button" id="reset" value="Limpiar" onclick="location.href='./index.php?msg'">
                 </fieldset>
