@@ -42,18 +42,18 @@ $(document).ready(function(){
 
 
 function printTableStruct(){
-    let estructura = `<table id="myTable" class="list-table">
+    let estructura = `<table id="myTable" class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Nº colegiado</th>
-                            <th>DNI</th>
-                            <th>Nombre</th>
-                            <th>Apellido 1</th>
-                            <th>Apellido 2</th>
-                            <th>Teléfono</th>
-                            <th>ID Especialidad</th>
-                            <th>ID horario</th>
-                            <th colspan="2">Opciones</th>
+                            <th class="table-dark">Nº colegiado</th>
+                            <th class="table-dark">DNI</th>
+                            <th class="table-dark">Nombre</th>
+                            <th class="table-dark">Apellido 1</th>
+                            <th class="table-dark">Apellido 2</th>
+                            <th class="table-dark">Teléfono</th>
+                            <th class="table-dark">ID Especialidad</th>
+                            <th class="table-dark">ID horario</th>
+                            <th colspan="2" class="table-dark">Opciones</th>
                          </tr>
                     </thead>
                     <tbody id="myTableData">
@@ -74,8 +74,8 @@ function printResponse(index,response){
                     <td>` + response[index]["telefono"] + `</td>
                     <td>` + response[index]["especialidad"] + `</td>
                     <td>` + response[index]["horario"] + `</td>
-                    <td><button id="delete_button`+index+`" name="`+index+`" class="std_button delete_button" >-</button></td>
-                    <td><button id="edit_button`+index+`" name="`+index+`" class="std_button edit_button">Editar</button></td>
+                    <td><button id="delete_button`+index+`" name="`+index+`" class="btn btn-danger" >-</button></td>
+                    <td><button id="edit_button`+index+`" name="`+index+`" class="btn btn-warning">Editar</button></td>
                 </tr>`
     $("#myTableData").append(fila)
 }

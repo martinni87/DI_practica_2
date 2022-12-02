@@ -80,16 +80,16 @@ function printResponse(index,response){
     $("#myTableData").append(fila)
 }
 
-function deleteRecord(id)
-    {
-        $.ajax({
-            url: './web_services/medicos_list.php?id=' + id,
-            type: 'DELETE',
-        })
-        .done(function(){
-            console.log("Eliminado")
-        })
-        .fail(function(jqXHR,textStatus,error){
-            alert("Error on delete")
-        });
-    }
+// function deleteRecord(id)
+//     {
+//         $.ajax({
+//             url: './web_services/medicos_list.php?id=' + id,
+//             type: 'DELETE',
+//         })
+//         .done(function(){
+//             console.log("Eliminado")
+//         })
+//         .fail(function(jqXHR,textStatus,error){
+//             alert("Error on delete")
+//         });
+//     }
